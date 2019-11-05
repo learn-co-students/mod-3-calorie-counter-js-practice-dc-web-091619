@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+# Had trouble with running bundle install and the nokogiri gem again...
+# Running bundle config build.nokogiri --use-system-libraries, followed by bundle install seemed to do the trick
+
 ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
+gem 'rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
